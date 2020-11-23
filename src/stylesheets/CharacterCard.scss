@@ -10,39 +10,35 @@
   height: 350px;
   border-radius: 20px;
   box-shadow: 0 0 20px #28df28;
-}
+  &__box {
+    width: 200px;
+    margin: auto;
+    &--img {
+      width: 100%;
+      border-radius: 100px;
+      border: 4px solid purple;
+      box-sizing: border-box;
+    }
+  }
+  &__description {
+    padding: 30px;
+    background-color: purple;
+    border-top: 2px solid purple;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    &--title {
+      font-family: "Chelsea Market";
+      color: white;
+      margin-bottom: 5px;
+    }
 
-.card__box {
-  width: 200px;
-  margin: auto;
-}
-
-.card__box--img {
-  width: 100%;
-  border-radius: 100px;
-  border: 4px solid purple;
-  box-sizing: border-box;
-}
-
-.card__description {
-  padding: 30px;
-  background-color: purple;
-  border-top: 2px solid purple;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-}
-
-.card__description--title {
-  font-family: "Chelsea Market";
-  color: white;
-  margin-bottom: 5px;
-}
-
-.card__description--species {
-  font-family: "Chelsea Market";
-  color: black;
-  margin-top: 5px;
+    &--species {
+      font-family: "Chelsea Market";
+      color: black;
+      margin-top: 5px;
+    }
+  }
 }

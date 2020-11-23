@@ -3,6 +3,7 @@ import "../stylesheets/App.scss";
 import getDataFromApi from "../services/getDataFromApi";
 import Header from "./Header";
 import CharacterList from "./characters/CharacterList";
+import Filters from "./filters/Filters";
 
 const App = () => {
   //estados
@@ -16,6 +17,7 @@ const App = () => {
   return (
     <div className="page">
       <Header />
+      <Filters />
       <main className="main">
         <CharacterList characters={characters} />
       </main>
