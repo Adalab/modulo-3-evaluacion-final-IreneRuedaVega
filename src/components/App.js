@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../stylesheets/App.scss";
 import getDataFromApi from "../services/getDataFromApi";
+import Header from "./Header";
 
 const App = () => {
   //estados
@@ -13,7 +14,9 @@ const App = () => {
 
   return (
     <>
-      <div className="page">Hola mundo</div>
+      <div className="page">
+        <Header />
+      </div>
     </>
   );
 };
