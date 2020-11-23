@@ -1,0 +1,47 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 2rem 0.5rem 0.5rem 0;
+  border-radius: 0.5rem;
+  background-color: #f2f2f2;
+  border: 0.1875rem solid purple;
+  width: 250px;
+  height: 350px;
+  border-radius: 20px;
+  box-shadow: 9px 9px 18px -5px rgba(0, 0, 0, 1);
+}
+
+.card__box {
+  width: 200px;
+  margin: auto;
+}
+
+.card__box--img {
+  width: 100%;
+  border-radius: 100px;
+  border: 4px solid purple;
+  box-sizing: border-box;
+}
+
+.card__description {
+  padding: 30px;
+  background-color: purple;
+  border-top: 2px solid purple;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__description--title {
+  font-family: "Chelsea Market";
+  color: white;
+  margin-bottom: 5px;
+}
+
+.card__description--species {
+  font-family: "Chelsea Market";
+  color: black;
+  margin-top: 5px;
+}
