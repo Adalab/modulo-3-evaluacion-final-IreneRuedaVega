@@ -6,13 +6,15 @@ import CharacterList from "./characters/CharacterList";
 import Filters from "./filters/Filters";
 
 const App = () => {
-  //estados
+  //states
   const [characters, setCharacters] = useState([]);
   useEffect(() => {
     getDataFromApi().then((data) => {
       setCharacters(data);
     });
   }, []); // con este array vacío le decimos a React que solo ejecute este useEffect una vez. Ahora solo pedimos los datos al arrancar.
+
+  //event handlers
 
   return (
     <div className="page">
