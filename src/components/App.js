@@ -14,7 +14,7 @@ const App = () => {
   }, []); // con este array vacío le decimos a React que solo ejecute este useEffect una vez. Ahora solo pedimos los datos al arrancar.
 
   return (
-    <div class="page">
+    <div className="page">
       <Header />
       <main className="main">
         <CharacterList characters={characters} />
