@@ -16,10 +16,14 @@ const App = () => {
 
   //event handlers
 
+  const handleFilter = (data) => {
+    console.log("manejando los filtros", data);
+  };
+
   return (
     <div className="page">
       <Header />
-      <Filters />
+      <Filters handleFilter={handleFilter} />
       <main className="main">
         <CharacterList characters={characters} />
       </main>

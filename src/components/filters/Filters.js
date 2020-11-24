@@ -2,11 +2,11 @@ import React from "react";
 import FilterByName from "./FilterByName";
 import "../../stylesheets/Filters.scss";
 
-const Filters = () => {
+const Filters = (props) => {
   return (
     <section>
       <form className="form">
-        <FilterByName />
+        <FilterByName handleFilter={props.handleFilter} />
       </form>
     </section>
   );

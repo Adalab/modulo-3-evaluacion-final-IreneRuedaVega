@@ -1,9 +1,9 @@
 import React from "react";
 import "../../stylesheets/Filters.scss";
 
-const FilterByName = () => {
+const FilterByName = (props) => {
   const handleChange = (ev) => {
-    console.log(ev.type);
+    props.handleFilter(ev.target.value);
   };
   return (
     <>
