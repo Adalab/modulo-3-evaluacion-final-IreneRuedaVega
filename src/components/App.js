@@ -76,6 +76,7 @@ const App = () => {
           </main>
         </Route>
         <Route path="/character/:id" component={renderCharacterDetail} />
+        <Route path="/" component={PageNotFound} />
       </Switch>
     </div>
   );
