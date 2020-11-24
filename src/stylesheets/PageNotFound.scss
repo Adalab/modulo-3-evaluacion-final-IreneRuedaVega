@@ -1,4 +1,4 @@
-.noCharacter {
+.wrapper {
   color: black;
   margin-top: 100px;
   background-color: black;
@@ -18,7 +18,21 @@
   &__img {
     width: 400px;
     border-radius: 100px;
-    margin-bottom: 40px;
+    margin-top: 70px;
     box-shadow: 0 0 20px #28df28;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 800px;
+    text-decoration: none;
+    font-family: "Chelsea Market";
+    color: white;
+    border: 2px solid #28df28;
+    padding: 10px;
+    border-radius: 20px;
   }
 }

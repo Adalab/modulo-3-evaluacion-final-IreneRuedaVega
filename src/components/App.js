@@ -6,6 +6,7 @@ import Header from "./Header";
 import CharacterList from "./characters/CharacterList";
 import Filters from "./filters/Filters";
 import CharacterDetail from "./characters/CharacterDetail";
+import PageNotFound from "./PageNotFound";
 
 const App = () => {
   //states
@@ -56,6 +57,8 @@ const App = () => {
           episodes={character.episodes}
         />
       );
+    } else {
+      return <PageNotFound />;
     }
   };
 
