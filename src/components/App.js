@@ -40,10 +40,7 @@ const App = () => {
   });
 
   const renderCharacterDetail = (props) => {
-    console.log("Entro en la función");
-    console.log(props.match);
     const routeCharacterId = parseInt(props.match.params.id);
-    console.log(routeCharacterId);
     const character = characters.find((character) => {
       return character.id === routeCharacterId;
     });
