@@ -26,6 +26,14 @@ const App = () => {
     }
   };
 
+  //Organizar los personajes por orden alfabético
+
+  characters.sort(function (a, b) {
+    if (a.name < b.name) return -1;
+    if (a.name > b.name) return 1;
+    return 0;
+  });
+
   //Filtrado de personajes
   const filteredCharacters = characters.filter((character) => {
     return character.name.toUpperCase().includes(nameFilter.toUpperCase());
@@ -33,6 +41,7 @@ const App = () => {
 
   const renderCharacterDetail = (props) => {
     console.log("Entro en la función");
+    console.log(props.match.params.id);
     const routeCharacterId = parseInt(props.match.params.id);
     console.log(routeCharacterId);
     const character = characters.find((character) => {
@@ -52,13 +61,15 @@ const App = () => {
       );
     }
   };
+  /* 
+  console.log(renderCharacterDetail); */
 
   return (
     <div className="page">
+      <Header />
+      <Filters nameFilter={nameFilter} handleFilter={handleFilter} />
       <Switch>
         <Route exact path="/">
-          <Header />
-          <Filters nameFilter={nameFilter} handleFilter={handleFilter} />
           <main className="main">
             <CharacterList
               characters={filteredCharacters}

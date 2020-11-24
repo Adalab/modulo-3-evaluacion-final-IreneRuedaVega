@@ -6,7 +6,7 @@ import iconDead from "../../images/dead.png";
 const CharacterCard = (props) => {
   const dead = props.status === "Dead" ? iconDead : null;
   return (
-    <li className="card" id={props.id}>
+    <li key={props.id} className="card" id={props.id}>
       <div className="card__box">
         <img
           className="card__box--img"
