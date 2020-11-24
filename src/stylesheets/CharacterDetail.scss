@@ -16,7 +16,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background-color: purple;
+  background-color: rgb(67, 197, 230);
   width: 800px;
   height: 500px;
   border-radius: 50px;
@@ -35,43 +35,33 @@
     border-radius: 20px;
     color: black;
     background-color: white;
+    &--name {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: purple;
+      font-family: "Creepster", cursive;
+      font-size: 24px;
+      margin-top: 40px;
+      word-spacing: 1rem;
+    }
+    &--box {
+      border-top: 4px solid#1cff1c;
+      margin: 20px 0 0 50px;
+      width: 250px;
+    }
   }
 }
 
-.characterModal__description--name {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: red;
-}
-
-.characterModal__description--box {
-  border: 4px solid#1cff1c;
-  margin: 80px 0 0 30px;
-  width: 250px;
-}
-
-.species {
-  background-color: yellow;
-  display: flex;
-  padding-top: 10px;
-}
-
-.origin {
-  background-color: pink;
-  display: flex;
-  padding-top: 10px;
-}
-
-.status {
-  background-color: blue;
-  display: flex;
-  padding-top: 10px;
-}
-
+.species,
+.origin,
+.status,
 .episode {
-  background-color: orange;
   display: flex;
-  padding-top: 10px;
+  padding: 10px;
+  font-family: "Chelsea Market";
+  &__title {
+    margin-right: 10px;
+  }
 }
