@@ -1,16 +1,17 @@
 import React from "react";
-/* import { Link } from "react-route-dom"; */
-import "../../stylesheets/CharacterCard.scss";
+import "../../stylesheets/CharacterDetail.scss";
 
 const ChracterDetail = (props) => {
+  console.log(props);
   return (
-    <div>
+    <div className="modal modal__hidden_">
       <div>
         <img src="" alt="" />
       </div>
       <div>
         <span>
           <h3>Nombre del personaje:</h3>
+          <p>nombre</p>
         </span>
         <span>
           <h4>Especie:</h4>
