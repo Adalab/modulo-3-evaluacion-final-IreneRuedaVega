@@ -4,7 +4,6 @@ import Image from "../images/not-found.jpg";
 import "../stylesheets/PageNotFound.scss";
 
 const PageNotFound = () => {
-  console.log("Hola");
   return (
     <>
       <section className="wrapper">

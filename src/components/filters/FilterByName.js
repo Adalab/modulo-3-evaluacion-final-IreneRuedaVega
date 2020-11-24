@@ -1,5 +1,6 @@
 import React from "react";
 import "../../stylesheets/Filters.scss";
+import PropTypes from "prop-types";
 
 const FilterByName = (props) => {
   const handleChange = (ev) => {
@@ -24,6 +25,11 @@ const FilterByName = (props) => {
       />
     </>
   );
+};
+
+FilterByName.propTypes = {
+  value: PropTypes.string,
+  inputSearch: PropTypes.func,
 };
 
 export default FilterByName;
