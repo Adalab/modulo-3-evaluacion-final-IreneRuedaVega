@@ -23,9 +23,10 @@
   box-shadow: 0 0 20px #1cff1c;
 
   &__img {
-    border-radius: 30px;
     border-radius: 200px;
     box-shadow: 0 0 50px #1cff1c;
+    margin-left: 50px;
+    margin-right: 10px;
   }
 
   &__description {
@@ -33,6 +34,7 @@
     height: 300px;
     box-shadow: 0 0 20px #1cff1c;
     border-radius: 20px;
+    margin-left: 10px;
     color: black;
     background-color: white;
     &--name {
@@ -42,14 +44,14 @@
       align-items: center;
       color: purple;
       font-family: "Creepster", cursive;
-      font-size: 24px;
+      font-size: 20px;
       margin-top: 40px;
       word-spacing: 1rem;
     }
     &--box {
       border-top: 4px solid#1cff1c;
-      margin: 20px 0 0 50px;
-      width: 250px;
+      margin: 20px 0 0 40px;
+      width: 240px;
     }
   }
 }
@@ -64,4 +66,19 @@
   &__title {
     margin-right: 10px;
   }
+}
+
+.home {
+  color: black;
+  margin-bottom: 400px;
+  margin-right: 50px;
+  font-family: "Chelsea Market";
+  font-size: 15px;
+  border: 2px solid purple;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.goBack {
+  text-decoration: none;
 }

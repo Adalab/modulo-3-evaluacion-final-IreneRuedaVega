@@ -1,5 +1,6 @@
 import React from "react";
 import "../../stylesheets/CharacterDetail.scss";
+import { Link } from "react-router-dom";
 
 const ChracterDetail = (props) => {
   return (
@@ -33,6 +34,9 @@ const ChracterDetail = (props) => {
             </span>
           </div>
         </div>
+        <Link to="/" className="goBack">
+          <div className="home">Volver</div>
+        </Link>
       </div>
     </div>
   );
