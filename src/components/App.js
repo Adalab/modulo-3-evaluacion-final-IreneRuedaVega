@@ -4,6 +4,7 @@ import getDataFromApi from "../services/getDataFromApi";
 import Header from "./Header";
 import CharacterList from "./characters/CharacterList";
 import Filters from "./filters/Filters";
+import CharacterDetail from "./characters/CharacterDetail";
 
 const App = () => {
   //states
