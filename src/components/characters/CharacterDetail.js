@@ -17,11 +17,11 @@ const ChracterDetail = (props) => {
           </span>
           <div className="characterModal__description--box">
             <span className="species">
-              <h4 className="species__title">Especie:</h4>
+              <h4 className="species__title">Specie:</h4>
               <p>{props.species}</p>
             </span>
             <span className="origin">
-              <h4 className="origin__title">Origen:</h4>
+              <h4 className="origin__title">Origin:</h4>
               <p>{props.origin}</p>
             </span>
             <span className="status">
@@ -29,7 +29,7 @@ const ChracterDetail = (props) => {
               <p>{props.status}</p>
             </span>
             <span className="episode">
-              <h4 className="episode__title">Episodios:</h4>
+              <h4 className="episode__title">Episodes:</h4>
               <p>{props.episodes}</p>
             </span>
           </div>

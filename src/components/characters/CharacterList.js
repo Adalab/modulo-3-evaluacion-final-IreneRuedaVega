@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import CharacterCard from "./CharacterCard";
 import "../../stylesheets/CharacterList.scss";
+import CharacterNotFound from "./CharacterNotFound";
 
 const CharacterList = (props) => {
   const charactersElements = props.characters.map((character) => {
@@ -16,6 +17,10 @@ const CharacterList = (props) => {
       />
     );
   });
+
+  if (charactersElements.length === 0) {
+    return <CharacterNotFound nameFilter={props.nameFilter} />;
+  }
 
   return <ul className="cardList">{charactersElements}</ul>;
 };
