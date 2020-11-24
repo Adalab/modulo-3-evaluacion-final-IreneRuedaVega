@@ -8,6 +8,9 @@ import Filters from "./filters/Filters";
 const App = () => {
   //states
   const [characters, setCharacters] = useState([]);
+  const [nameFilter, setNameFilter] = useState("");
+
+  //montaje
   useEffect(() => {
     getDataFromApi().then((data) => {
       setCharacters(data);
@@ -17,15 +20,25 @@ const App = () => {
   //event handlers
 
   const handleFilter = (data) => {
-    console.log("manejando los filtros", data);
+    if (data.key === "nameFilter") {
+      setNameFilter(data.value);
+    }
   };
+
+  //Filtrado de personajes
+  const filteredCharacters = characters.filter((character) => {
+    return character.name.toUpperCase().includes(nameFilter.toUpperCase());
+  });
 
   return (
     <div className="page">
       <Header />
-      <Filters handleFilter={handleFilter} />
+      <Filters nameFilter={nameFilter} handleFilter={handleFilter} />
       <main className="main">
-        <CharacterList characters={characters} />
+        <CharacterList
+          characters={filteredCharacters}
+          nameFilter={nameFilter}
+        />
       </main>
     </div>
   );

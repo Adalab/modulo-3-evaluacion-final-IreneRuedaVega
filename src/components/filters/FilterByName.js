@@ -3,7 +3,10 @@ import "../../stylesheets/Filters.scss";
 
 const FilterByName = (props) => {
   const handleChange = (ev) => {
-    props.handleFilter(ev.target.value);
+    props.handleFilter({
+      value: ev.target.value,
+      key: "nameFilter",
+    });
   };
   return (
     <>
@@ -16,6 +19,7 @@ const FilterByName = (props) => {
         name="name"
         id="name"
         placeholder="Busca tu personaje favorito"
+        value={props.nameFilter}
         onChange={handleChange}
       />
     </>
