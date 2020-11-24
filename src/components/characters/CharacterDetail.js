@@ -11,7 +11,7 @@ const ChracterDetail = (props) => {
       <div>
         <span>
           <h3>Nombre del personaje:</h3>
-          <p>nombre</p>
+          <p>{props.name}</p>
         </span>
         <span>
           <h4>Especie:</h4>

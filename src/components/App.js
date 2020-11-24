@@ -41,7 +41,7 @@ const App = () => {
 
   const renderCharacterDetail = (props) => {
     console.log("Entro en la función");
-    console.log(props.match.params.id);
+    console.log(props.match);
     const routeCharacterId = parseInt(props.match.params.id);
     console.log(routeCharacterId);
     const character = characters.find((character) => {
@@ -61,8 +61,6 @@ const App = () => {
       );
     }
   };
-  /* 
-  console.log(renderCharacterDetail); */
 
   return (
     <div className="page">
