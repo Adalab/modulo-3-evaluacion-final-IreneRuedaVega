@@ -9,7 +9,7 @@ import CharacterDetail from "./characters/CharacterDetail";
 import PageNotFound from "./PageNotFound";
 
 const App = () => {
-  //states
+  //estados
   const [characters, setCharacters] = useState([]);
   const [nameFilter, setNameFilter] = useState("");
 
@@ -27,8 +27,7 @@ const App = () => {
     }
   };
 
-  //Organizar los personajes por orden alfabético
-
+  //Organizamos los personajes por orden alfabético
   characters.sort(function (a, b) {
     if (a.name < b.name) return -1;
     if (a.name > b.name) return 1;
@@ -40,6 +39,7 @@ const App = () => {
     return character.name.toUpperCase().includes(nameFilter.toUpperCase());
   });
 
+  //Renderizamos
   const renderCharacterDetail = (props) => {
     const routeCharacterId = parseInt(props.match.params.id);
     const character = characters.find((character) => {
