@@ -26,7 +26,7 @@ const CharacterList = (props) => {
 };
 
 CharacterList.prototype = {
-  data: PropTypes.array,
+  characters: PropTypes.array,
 };
 
 export default CharacterList;
