@@ -5,7 +5,7 @@ import "../../stylesheets/CharacterCard.scss";
 import iconDead from "../../images/dead.png";
 
 const CharacterCard = (props) => {
-  const dead = props.status === "Dead" ? iconDead : null;
+  const dead = props.status === "Dead" ? iconDead : "";
   return (
     <Link to={`/character/${props.id}`} className="link">
       <li key={props.id} className="card" id={props.id}>
