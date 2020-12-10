@@ -1,25 +1,24 @@
 {
   "files": {
-    "main.css": "./static/css/main.66d66afd.chunk.css",
-    "main.js": "./static/js/main.d70c4fa2.chunk.js",
-    "main.js.map": "./static/js/main.d70c4fa2.chunk.js.map",
+    "main.css": "./static/css/main.f47f6e9e.chunk.css",
+    "main.js": "./static/js/main.f3c52a09.chunk.js",
+    "main.js.map": "./static/js/main.f3c52a09.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.812ec00c.js",
     "runtime-main.js.map": "./static/js/runtime-main.812ec00c.js.map",
     "static/js/2.6bc483a8.chunk.js": "./static/js/2.6bc483a8.chunk.js",
     "static/js/2.6bc483a8.chunk.js.map": "./static/js/2.6bc483a8.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.66d66afd.chunk.css.map": "./static/css/main.66d66afd.chunk.css.map",
+    "static/css/main.f47f6e9e.chunk.css.map": "./static/css/main.f47f6e9e.chunk.css.map",
     "static/js/2.6bc483a8.chunk.js.LICENSE.txt": "./static/js/2.6bc483a8.chunk.js.LICENSE.txt",
-    "static/media/App.scss": "./static/media/background-rickymorty.e0820813.jpg",
     "static/media/dead.ba5073d6.png": "./static/media/dead.ba5073d6.png",
-    "static/media/logo.de13d484.png": "./static/media/logo.de13d484.png",
-    "static/media/not-found.ec037ebe.jpg": "./static/media/not-found.ec037ebe.jpg",
-    "static/media/CharacterDetail.scss": "./static/media/rick.1d8bb351.png"
+    "static/media/CharacterDetail.scss": "./static/media/rmFondo.ff61a080.png",
+    "static/media/rmLogo.20c17c33.png": "./static/media/rmLogo.20c17c33.png",
+    "static/media/rmPersonaje.4255c72c.png": "./static/media/rmPersonaje.4255c72c.png"
   },
   "entrypoints": [
     "static/js/runtime-main.812ec00c.js",
     "static/js/2.6bc483a8.chunk.js",
-    "static/css/main.66d66afd.chunk.css",
-    "static/js/main.d70c4fa2.chunk.js"
+    "static/css/main.f47f6e9e.chunk.css",
+    "static/js/main.f3c52a09.chunk.js"
   ]
 }
