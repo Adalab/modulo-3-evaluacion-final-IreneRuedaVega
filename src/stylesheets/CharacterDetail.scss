@@ -3,12 +3,19 @@
   top: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url(../images/rick.png);
+  background-image: url(../images/rmFondo.png);
   background-size: cover;
-  background-repeat: repeat;
+  background-position: center bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  &__img {
+    width: 300px;
+    margin-bottom: 80px;
+  }
 }
 
 .characterModal {
@@ -16,69 +23,87 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(67, 197, 230);
-  width: 800px;
-  height: 500px;
-  border-radius: 50px;
-  box-shadow: 0 0 20px #1cff1c;
+  background-color: white;
+  width: 780px;
+  height: 350px;
+  padding: 10px;
+  border-radius: 15px;
 
   &__img {
-    border-radius: 200px;
-    box-shadow: 0 0 50px #1cff1c;
-    margin-left: 50px;
-    margin-right: 10px;
+    border-radius: 10px;
+    margin-left: 3px;
+    margin-right: 15px;
   }
 
   &__description {
-    width: 350px;
     height: 300px;
-    box-shadow: 0 0 20px #1cff1c;
-    border-radius: 20px;
-    margin-left: 10px;
+    margin-left: 0px;
     color: black;
     background-color: white;
     &--name {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      color: purple;
-      font-family: "Creepster", cursive;
+      align-items: flex-start;
+      color: #b475be;
+      font-family: "Roboto";
       font-size: 20px;
-      margin-top: 40px;
-      word-spacing: 1rem;
+      margin: 0 10px 0 10px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #b475be;
     }
     &--box {
-      border-top: 4px solid#1cff1c;
-      margin: 20px 0 0 40px;
-      width: 240px;
+      width: 400px;
     }
   }
 }
 
 .species,
+.status {
+  font-family: "Roboto";
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 8px;
+    color: #42c4d6;
+    font-size: 18px;
+    &--title {
+      color: #42c4d6;
+    }
+  }
+}
+
 .origin,
-.status,
 .episode {
-  display: flex;
-  padding: 10px;
-  font-family: "Chelsea Market";
-  &__title {
-    margin-right: 10px;
+  font-family: "Roboto";
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ebf9fb;
+    padding: 20px;
+    margin-top: 8px;
+    color: #42c4d6;
+    font-size: 18px;
+    border-radius: 10px;
+    &--title {
+      color: #42c4d6;
+    }
   }
 }
 
 .home {
-  color: black;
-  margin-bottom: 400px;
-  margin-right: 50px;
-  font-family: "Chelsea Market";
-  font-size: 15px;
-  border: 2px solid purple;
-  padding: 5px;
+  color: white;
+  margin: 0 0 20px 672px;
+  font-family: "Roboto";
+  font-size: 20px;
+  border: 2px solid white;
+  padding: 10px 30px;
   border-radius: 10px;
-}
-
-.goBack {
-  text-decoration: none;
+  &__goBack {
+    text-decoration: none;
+    &--text {
+      color: white;
+    }
+  }
 }
