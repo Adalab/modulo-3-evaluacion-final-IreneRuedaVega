@@ -1,25 +1,15 @@
 .header {
   width: 100%;
-  height: 145px;
-  background-color: greenyellow;
+  height: 230px;
+  /*  background-color: greenyellow; */
   position: relative;
-  box-shadow: 0 0 20px #28df28;
-  padding: 30px 0;
-}
-
-.container {
+  padding-top: 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 5px;
-  &__title {
-    font-family: "Creepster", cursive;
-    font-size: 30px;
-    color: rgb(175, 0, 175);
-  }
 
   &__img {
-    width: 400px;
+    width: 350px;
   }
 }
