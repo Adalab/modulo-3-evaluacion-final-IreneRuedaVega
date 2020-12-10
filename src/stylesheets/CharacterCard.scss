@@ -4,48 +4,46 @@
   justify-content: space-around;
   margin: 2rem 0.5rem 0.5rem 0;
   border-radius: 0.5rem;
-  background-color: #f2f2f2;
-  border: 0.1875rem solid purple;
-  width: 250px;
-  height: 350px;
+  background-color: white;
+  width: 280px;
+  height: 400px;
   border-radius: 20px;
-  box-shadow: 0 0 20px #28df28;
   &__box {
-    width: 200px;
-    margin: auto;
-    &--img {
-      width: 100%;
-      border-radius: 100px;
-      border: 4px solid purple;
-      box-sizing: border-box;
-    }
-  }
-  &__description {
-    padding: 10px;
-    background-color: purple;
-    border-top: 2px solid purple;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
+
+    &--img {
+      width: 100%;
+    }
+
     &--title {
       font-family: "Chelsea Market";
-      color: white;
-      margin-bottom: 5px;
+      color: #4cc8d8;
+      margin-top: 40px;
     }
+  }
+  &__description {
+    padding: 14px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 
     &--species {
       font-family: "Chelsea Market";
-      color: black;
-      margin-top: 5px;
+      color: #4cc8d8;
     }
   }
 }
 
 .icon {
-  margin-top: 10px;
-  width: 30px;
+  width: 25px;
 }
 
 .link {
