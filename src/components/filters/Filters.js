@@ -1,6 +1,7 @@
 import React from "react";
 import FilterByName from "./FilterByName";
 import "../../stylesheets/Filters.scss";
+import FilterByEpisode from "./FilterByEpisode";
 
 const Filters = (props) => {
   const preventEvent = (ev) => {
@@ -12,6 +13,10 @@ const Filters = (props) => {
         <FilterByName
           handleFilter={props.handleFilter}
           nameFilter={props.nameFilter}
+        />
+        <FilterByEpisode
+          episodeFilter={props.episodeFilter}
+          handleFilter={props.handleFilter}
         />
       </form>
     </section>

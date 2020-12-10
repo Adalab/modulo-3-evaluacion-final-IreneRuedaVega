@@ -12,6 +12,7 @@ const App = () => {
   //estados
   const [characters, setCharacters] = useState([]);
   const [nameFilter, setNameFilter] = useState("");
+  const [episodeFilter, setEpisodeFilter] = useState("");
 
   //montaje
   useEffect(() => {
@@ -22,8 +23,13 @@ const App = () => {
 
   //event handlers
   const handleFilter = (data) => {
+    /* console.log(data.key, data.value); */
     if (data.key === "nameFilter") {
       setNameFilter(data.value);
+      console.log("Name", nameFilter);
+    } else if (data.key === "episodeFilter") {
+      setEpisodeFilter(data.value);
+      console.log("Episode", episodeFilter);
     }
   };
 
@@ -35,9 +41,17 @@ const App = () => {
   });
 
   //Filtrado de personajes
-  const filteredCharacters = characters.filter((character) => {
-    return character.name.toUpperCase().includes(nameFilter.toUpperCase());
-  });
+  const filteredCharacters = characters
+    .filter((character) => {
+      return character.name.toUpperCase().includes(nameFilter.toUpperCase());
+    })
+    .filter((character) => {
+      if (episodeFilter === "") {
+        return true;
+      } else {
+        return character.episodes === parseInt(episodeFilter);
+      }
+    });
 
   //Renderizamos
   const renderCharacterDetail = (props) => {
@@ -65,7 +79,11 @@ const App = () => {
   return (
     <div className="page">
       <Header />
-      <Filters nameFilter={nameFilter} handleFilter={handleFilter} />
+      <Filters
+        nameFilter={nameFilter}
+        episodeFilter={episodeFilter}
+        handleFilter={handleFilter}
+      />
       <Switch>
         <Route exact path="/">
           <main className="main">

@@ -6,6 +6,7 @@ const getDataFromApi = () => {
     .then((data) => {
       //Ya tengo el array que puedo iterar console.log(data.results); */
       return data.results.map((character) => {
+        /* console.log(character.episode.length); */
         return {
           id: character.id,
           name: character.name,

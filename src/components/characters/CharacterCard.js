@@ -22,6 +22,9 @@ const CharacterCard = (props) => {
             <h4>{props.species}</h4>
           </div>
           <div>
+            <p className="card__description--species">{props.episodes}</p>
+          </div>
+          <div>
             <img className="icon" src={`${dead}`} alt="" />
           </div>
         </div>
