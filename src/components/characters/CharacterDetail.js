@@ -7,11 +7,9 @@ const ChracterDetail = (props) => {
   return (
     <div className="modal">
       <img className="modal__img" src={Logo2} alt="Logo de Rick y Morty" />
-      <div className="home">
-        <Link to="/" className="home__goBack">
-          <div className="home__goBack--text">Back</div>
-        </Link>
-      </div>
+      <Link to="/" className="home">
+        Back
+      </Link>
       <div className="characterModal">
         <img
           className="characterModal__img"

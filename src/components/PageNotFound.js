@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Image from "../images/not-found.jpg";
+import Image1 from "../images/rmPersonaje.png";
 import "../stylesheets/PageNotFound.scss";
 
 const PageNotFound = () => {
@@ -10,8 +10,8 @@ const PageNotFound = () => {
         <Link to="/" className="wrapper__link">
           <p>Volver</p>
         </Link>
-        <p className="wrapper__text">Ese personaje no lo hemos encontrado</p>
-        <img className="wrapper__img" src={Image} alt="" />
+        <p className="wrapper__text">We couldn´t find this character</p>
+        <img className="wrapper__img" src={Image1} alt="" />
       </section>
     </>
   );

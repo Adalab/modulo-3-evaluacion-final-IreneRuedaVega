@@ -64,7 +64,7 @@
   &__text {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 19px;
     margin-top: 8px;
     color: #42c4d6;
     font-size: 18px;
@@ -81,7 +81,7 @@
     display: flex;
     justify-content: space-between;
     background-color: #ebf9fb;
-    padding: 20px;
+    padding: 18px;
     margin-top: 8px;
     color: #42c4d6;
     font-size: 18px;
@@ -100,10 +100,5 @@
   border: 2px solid white;
   padding: 10px 30px;
   border-radius: 10px;
-  &__goBack {
-    text-decoration: none;
-    &--text {
-      color: white;
-    }
-  }
+  text-decoration: none;
 }
