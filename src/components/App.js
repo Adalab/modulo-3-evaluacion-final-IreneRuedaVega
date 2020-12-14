@@ -12,7 +12,9 @@ import Loading from "./Loading";
 const App = () => {
   //estados
   const [characters, setCharacters] = useState([]);
-  const [nameFilter, setNameFilter] = useState("");
+  const [nameFilter, setNameFilter] = useState(
+    localStorage.getItem("nameFilter") || ""
+  );
   const [genderFilter, setGenderFilter] = useState("All");
   const [speciesFilter, setSpeciesFilter] = useState("All");
   const [statusFilter, setStatusFilter] = useState([]);
@@ -27,6 +29,12 @@ const App = () => {
       })
       .then(() => setLoading(false));
   }, []); // con este array vacío le decimos a React que solo ejecute este useEffect una vez. Ahora solo pedimos los datos al arrancar.
+
+  //LocalStorage
+
+  useEffect(() => {
+    localStorage.setItem("nameFilter", nameFilter);
+  }, [nameFilter]);
 
   //event handlers
   const handleFilter = (data) => {
