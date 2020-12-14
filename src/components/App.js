@@ -14,6 +14,7 @@ const App = () => {
   const [nameFilter, setNameFilter] = useState("");
   const [genderFilter, setGenderFilter] = useState("All");
   const [speciesFilter, setSpeciesFilter] = useState("All");
+  const [statusFilter, setStatusFilter] = useState([]);
 
   //montaje
   useEffect(() => {
@@ -30,6 +31,17 @@ const App = () => {
       setGenderFilter(data.value);
     } else if (data.key === "speciesFilter") {
       setSpeciesFilter(data.value);
+    } else if (data.key === "statusFilter") {
+      if (data.checked === true) {
+        const newStatusFilter = [...statusFilter];
+        newStatusFilter.push(data.value);
+        setStatusFilter(newStatusFilter);
+      } else {
+        const newStatusFilter = statusFilter.filter(
+          (statu) => statu !== data.value
+        );
+        setStatusFilter(newStatusFilter);
+      }
     }
   };
 
@@ -57,6 +69,13 @@ const App = () => {
         return true;
       } else {
         return character.species === speciesFilter;
+      }
+    })
+    .filter((character) => {
+      if (statusFilter.length === 0) {
+        return true;
+      } else {
+        return statusFilter.includes(character.status);
       }
     });
 
@@ -95,6 +114,7 @@ const App = () => {
               nameFilter={nameFilter}
               genderFilter={genderFilter}
               speciesFilter={speciesFilter}
+              statusFilter={statusFilter}
             />
           </main>
         </Route>

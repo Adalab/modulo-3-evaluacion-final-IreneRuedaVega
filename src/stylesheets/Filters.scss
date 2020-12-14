@@ -41,4 +41,21 @@
     background-color: white;
     color: #59abb7;
   }
+
+  &__status {
+    border: 2px solid white;
+    border-radius: 0.6rem;
+    padding: 0.5rem;
+    color: white;
+    background-color: #59abb7;
+    font-family: "Roboto";
+    margin-left: 30px;
+
+    &--text,
+    &--alive,
+    &--unknow,
+    &--dead {
+      margin: 0 10px;
+    }
+  }
 }
