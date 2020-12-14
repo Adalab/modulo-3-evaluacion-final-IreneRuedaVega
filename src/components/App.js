@@ -12,6 +12,8 @@ const App = () => {
   //estados
   const [characters, setCharacters] = useState([]);
   const [nameFilter, setNameFilter] = useState("");
+  const [genderFilter, setGenderFilter] = useState("All");
+  const [speciesFilter, setSpeciesFilter] = useState("All");
 
   //montaje
   useEffect(() => {
@@ -24,6 +26,10 @@ const App = () => {
   const handleFilter = (data) => {
     if (data.key === "nameFilter") {
       setNameFilter(data.value);
+    } else if (data.key === "genderFilter") {
+      setGenderFilter(data.value);
+    } else if (data.key === "speciesFilter") {
+      setSpeciesFilter(data.value);
     }
   };
 
@@ -35,9 +41,24 @@ const App = () => {
   });
 
   //Filtrado de personajes
-  const filteredCharacters = characters.filter((character) => {
-    return character.name.toUpperCase().includes(nameFilter.toUpperCase());
-  });
+  const filteredCharacters = characters
+    .filter((character) => {
+      return character.name.toUpperCase().includes(nameFilter.toUpperCase());
+    })
+    .filter((character) => {
+      if (genderFilter === "All") {
+        return true;
+      } else {
+        return character.gender === genderFilter;
+      }
+    })
+    .filter((character) => {
+      if (speciesFilter === "All") {
+        return true;
+      } else {
+        return character.species === speciesFilter;
+      }
+    });
 
   //Renderizamos
   const renderCharacterDetail = (props) => {
@@ -72,6 +93,8 @@ const App = () => {
             <CharacterList
               characters={filteredCharacters}
               nameFilter={nameFilter}
+              genderFilter={genderFilter}
+              speciesFilter={speciesFilter}
             />
           </main>
         </Route>
