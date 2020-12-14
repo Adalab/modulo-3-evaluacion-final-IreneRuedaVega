@@ -15,7 +15,7 @@ const FilterByGender = (props) => {
         id="gender"
         onChange={handleSelect}
       >
-        <option defaultValue disabled selected>
+        <option value="" defaultValue>
           Gender
         </option>
         <option value="All">All</option>

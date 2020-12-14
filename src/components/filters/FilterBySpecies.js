@@ -15,7 +15,7 @@ const FilterBySpecies = (props) => {
         id="species"
         onChange={handleSpecies}
       >
-        <option defaultValue disabled selected>
+        <option value="" defaultValue>
           Species
         </option>
         <option value="All">All</option>

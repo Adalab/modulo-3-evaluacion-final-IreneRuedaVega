@@ -7,6 +7,7 @@ import CharacterList from "./characters/CharacterList";
 import Filters from "./filters/Filters";
 import CharacterDetail from "./characters/CharacterDetail";
 import PageNotFound from "./PageNotFound";
+import Loading from "./Loading";
 
 const App = () => {
   //estados
@@ -15,12 +16,16 @@ const App = () => {
   const [genderFilter, setGenderFilter] = useState("All");
   const [speciesFilter, setSpeciesFilter] = useState("All");
   const [statusFilter, setStatusFilter] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   //montaje
   useEffect(() => {
-    getDataFromApi().then((data) => {
-      setCharacters(data);
-    });
+    setLoading(true);
+    getDataFromApi()
+      .then((data) => {
+        setCharacters(data);
+      })
+      .then(() => setLoading(false));
   }, []); // con este array vacío le decimos a React que solo ejecute este useEffect una vez. Ahora solo pedimos los datos al arrancar.
 
   //event handlers
@@ -120,6 +125,7 @@ const App = () => {
         </Route>
         <Route path="/character/:id" component={renderCharacterDetail} />
       </Switch>
+      <Loading loading={loading} />
     </div>
   );
 };

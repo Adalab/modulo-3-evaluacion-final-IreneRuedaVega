@@ -1,0 +1,16 @@
+.loading {
+  width: 200px;
+  height: 200px;
+  border: 12px solid #e5e5e5;
+  border-top-color: #a85eb4;
+  display: block;
+  animation: is-rotating 1s infinite;
+  border-radius: 50%;
+  margin: auto;
+}
+
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
